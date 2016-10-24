@@ -1,0 +1,6 @@
+bin
+temp
+debug
+release
+*.layout
+*.depend
