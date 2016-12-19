@@ -33,7 +33,7 @@ endif
 OUTPUT  := $(OUTDIR)/$(OUTNAME)$(OUTEXT)
 TEMPDIR := temp
 INCDIR  :=
-INCDIR  += -I../igntoolkit/genutil
+INCDIR  += -Isubmod/genutil
 LIBDIR  :=
 CFLAGS  :=
 CFLAGS  += -Wall
@@ -41,8 +41,8 @@ CFLAGS  += -O3
 LDFLAGS :=
 LDFLAGS += -s
 SRCS    :=
-SRCS    += ../igntoolkit/genutil/gen/memobj.c
-SRCS    += ../igntoolkit/genutil/gen/utf.c
+SRCS    += submod/genutil/gen/memobj.c
+SRCS    += submod/genutil/gen/utf.c
 SRCS    += big5.c
 SRCS    += cmdopt.c
 SRCS    += cmddata.c
@@ -100,9 +100,9 @@ $(CXX) -c  $(INCDIR) $(CFLAGS) -o $@ $<
 endef
 
 -include $(DEPS)
-$(TEMPDIR)/%.o: ../igntoolkit/genutil/gen/%.c
+$(TEMPDIR)/%.o: submod/genutil/gen/%.c
 	$(Compile-C-Unit)
-$(TEMPDIR)/%.o: ../igntoolkit/genutil/gen/%.cpp
+$(TEMPDIR)/%.o: submod/genutil/gen/%.cpp
 	$(Compile-Cpp-Unit)
 $(TEMPDIR)/%.o: %.c
 	$(Compile-C-Unit)

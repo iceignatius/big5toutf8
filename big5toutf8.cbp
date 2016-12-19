@@ -30,16 +30,8 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="../igntoolkit/genutil" />
+			<Add directory="submod/genutil" />
 		</Compiler>
-		<Unit filename="../igntoolkit/genutil/gen/memobj.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../igntoolkit/genutil/gen/memobj.h" />
-		<Unit filename="../igntoolkit/genutil/gen/utf.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../igntoolkit/genutil/gen/utf.h" />
 		<Unit filename="big5.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -56,6 +48,14 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="submod/genutil/gen/memobj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="submod/genutil/gen/memobj.h" />
+		<Unit filename="submod/genutil/gen/utf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="submod/genutil/gen/utf.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
